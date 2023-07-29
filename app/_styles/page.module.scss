@@ -1,24 +1,17 @@
-@import '@styles/_variables';
-@import '@styles/_helpers';
-
 .container {
+    display: flex;
+    flex-direction: column;
     padding: rem(24);
     min-height: 100vh;
-}
-
-.background {
     background-image: url('../../public/home/background-home-mobile.jpg');
     background-size: cover;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
+    background-attachment: fixed;
 }
 
 .flex_wrapper {
-    margin-top: rem(48);
+    padding-top: rem(48);
+    flex: 1;
+    justify-content: center;
 }
 
 .text_wrapper {
@@ -28,7 +21,9 @@
 }
 
 .subheading {
-    font-family: $main-font;
+    font-family: $body-font-secondary;
+    font-size: rem(16);
+    letter-spacing: 2.7px;
 }
 
 .heading {

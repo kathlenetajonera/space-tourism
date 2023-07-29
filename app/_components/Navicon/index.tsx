@@ -1,11 +1,11 @@
-'use client';
-
-import { useState } from 'react';
 import styles from './styles.module.scss';
 
-const Navicon = () => {
-    const [isOpen, setIsOpen] = useState(false);
+type Props = {
+    isOpen: boolean;
+    setIsOpen: (open: boolean) => void;
+};
 
+const Navicon = ({ isOpen, setIsOpen }: Props) => {
     return (
         <div
             className={isOpen ? styles.navicon_open : styles.navicon}

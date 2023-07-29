@@ -1,6 +1,5 @@
 import '@styles/_base.scss';
 import '@styles/_default.scss';
-import '@styles/_helpers.scss';
 import styles from '@styles/page.module.scss';
 import { Bellefair, Barlow_Condensed, Barlow } from 'next/font/google';
 
@@ -27,7 +26,7 @@ const barlow = Barlow({
 });
 
 const barlow_condensed = Barlow_Condensed({
-    weight: '400',
+    weight: ['400', '700'],
     variable: '--font-barlow-condensed',
     display: 'swap',
     subsets: ['latin'],
