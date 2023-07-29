@@ -1,0 +1,5 @@
+$browser-context: 16; // Default
+
+@function rem($value) {
+    @return ($value / $browser-context) + rem;
+}

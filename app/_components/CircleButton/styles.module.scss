@@ -1,0 +1,14 @@
+@import '@styles/_variables';
+@import '@styles/_helpers';
+
+.container {
+    width: rem(150);
+    height: rem(150);
+    background-color: $white;
+    border-radius: 50%;
+}
+
+.label {
+    font-family: $main-font;
+    font-size: rem(20);
+}

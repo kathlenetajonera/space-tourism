@@ -1,0 +1,80 @@
+@import '@styles/_variables';
+@import '@styles/_helpers';
+
+/* Typography */
+h1,
+h2,
+h3,
+h4 {
+    font-family: $main-font;
+    font-weight: 400;
+}
+
+h5 {
+    font-family: $body-font;
+}
+
+p {
+    font-family: $body-font;
+    font-weight: 400;
+    font-size: rem(15);
+}
+
+h1 {
+    font-size: rem(80);
+}
+
+h2 {
+    font-size: rem(100);
+}
+
+h3 {
+    font-size: rem(56);
+}
+
+h4 {
+    font-size: rem(32);
+}
+
+h5 {
+    font-size: rem(28);
+    letter-spacing: 4.75;
+}
+
+/* Custom default styles */
+p,
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+input,
+button {
+    outline: none;
+    border: none;
+}
+
+/* Utility classes */
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

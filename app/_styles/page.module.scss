@@ -1,0 +1,49 @@
+@import '@styles/_variables';
+@import '@styles/_helpers';
+
+.container {
+    padding: rem(24);
+    min-height: 100vh;
+}
+
+.background {
+    background-image: url('../../public/home/background-home-mobile.jpg');
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.flex_wrapper {
+    margin-top: rem(48);
+}
+
+.text_wrapper {
+    text-align: center;
+    color: $white;
+    margin-bottom: rem(81);
+}
+
+.subheading {
+    font-family: $main-font;
+}
+
+.heading {
+    margin: rem(16) 0;
+}
+
+.desc {
+    line-height: rem(25);
+}
+
+.desc,
+.subheading {
+    color: $purple;
+}
+
+.button_wrapper {
+    margin: 0 auto;
+}
