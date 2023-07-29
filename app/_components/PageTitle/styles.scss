@@ -1,0 +1,15 @@
+.page-title {
+    font-family: $barlow-condensed;
+    font-size: rem(16);
+    color: $white;
+    letter-spacing: 2.7px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: rem(24) 0 rem(32);
+
+    span {
+        font-weight: 700;
+        opacity: 0.25;
+        margin-right: rem(18);
+    }
+}

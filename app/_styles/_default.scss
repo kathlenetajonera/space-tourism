@@ -3,25 +3,38 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: $main-font;
+    font-family: $bellefair;
     font-weight: 400;
+    color: $white;
 }
 
 h5 {
-    font-family: $body-font;
+    font-family: $barlow;
+    color: $white;
 }
 
 p {
-    font-family: $body-font;
+    font-family: $barlow;
     font-weight: 400;
     font-size: rem(15);
+    line-height: rem(25);
+    color: $purple;
 }
 
 a {
-    font-family: $body-font-secondary;
+    font-family: $barlow-condensed;
     font-size: rem(16);
     text-decoration: none;
     letter-spacing: 2.7px;
+    color: $white;
+}
+
+button {
+    font-family: $barlow-condensed;
+    font-size: rem(14);
+    background-color: transparent;
+    color: $white;
+    letter-spacing: 2.36px;
 }
 
 h1 {

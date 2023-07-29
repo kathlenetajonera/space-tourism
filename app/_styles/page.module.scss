@@ -3,9 +3,6 @@
     flex-direction: column;
     padding: rem(24);
     min-height: 100vh;
-    background-image: url('../../public/home/background-home-mobile.jpg');
-    background-size: cover;
-    background-attachment: fixed;
 }
 
 .flex_wrapper {
@@ -21,7 +18,7 @@
 }
 
 .subheading {
-    font-family: $body-font-secondary;
+    font-family: $barlow-condensed;
     font-size: rem(16);
     letter-spacing: 2.7px;
 }
