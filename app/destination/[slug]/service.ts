@@ -15,6 +15,11 @@ export async function getCurrentDestination(slug: string) {
     const res = await fetch(
         `${protocal}://${host}/api/destination?slug=${slug}`
     );
+
+    if (!res.ok) {
+        return undefined;
+    }
+
     const data = await res.json();
 
     return data;

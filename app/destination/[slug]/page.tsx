@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 import { getCurrentDestination, getDestinations } from './service';
 import { Destination, Destinations } from 'api/destination/types';
 import FullBackground from '@components/FullBackground';
@@ -15,6 +16,10 @@ export default async function Destination({
     const { slug } = params;
     const destinations: Destinations = await getDestinations();
     const currentData: Destination = await getCurrentDestination(slug);
+
+    if (!currentData) {
+        notFound();
+    }
 
     return (
         <>
