@@ -1,0 +1,59 @@
+.contentWrapper {
+    text-align: center;
+}
+
+.selection {
+    margin: rem(26) 0 rem(20);
+}
+
+.button {
+    color: $purple;
+    position: relative;
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+        margin-right: rem(20);
+    }
+}
+
+.title {
+    text-transform: uppercase;
+}
+
+.buttonActive {
+    @extend .button;
+    color: $white;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 95%;
+        height: 3px;
+        background-color: $white;
+
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.dataWrapper {
+    margin-bottom: rem(32);
+    text-align: center;
+}
+
+.dataLabel {
+    font-family: $barlow-condensed;
+    font-size: rem(14);
+    color: $purple;
+    letter-spacing: 2.36px;
+}
+
+.data {
+    font-family: $bellefair;
+    font-size: rem(28);
+    margin-top: rem(12);
+    color: $white;
+    text-transform: uppercase;
+}

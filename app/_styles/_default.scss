@@ -95,3 +95,10 @@ button {
     justify-content: space-between;
     align-items: center;
 }
+
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: #383b4b;
+    margin: rem(32) 0;
+}
