@@ -1,6 +1,7 @@
 import path from 'path';
 import { promises as fs } from 'fs';
 import { NextResponse } from 'next/server';
+import { Crew } from './types';
 
 export async function GET() {
     const jsonDirectory = path.join(process.cwd(), 'json');
@@ -9,7 +10,7 @@ export async function GET() {
         'utf8'
     );
 
-    let data = JSON.parse(fileContents).destinations;
+    let data: Crew[] = JSON.parse(fileContents).crew;
 
     return NextResponse.json(data);
 }

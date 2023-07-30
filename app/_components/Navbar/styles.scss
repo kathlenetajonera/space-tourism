@@ -1,4 +1,6 @@
 .nav {
+    z-index: 2;
+
     &__menu {
         position: absolute;
         background-image: url('../../../public/shared/mobile-menu-bg.png');

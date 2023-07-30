@@ -1,0 +1,44 @@
+.image {
+    display: block;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.separator {
+    margin-top: 0;
+}
+
+.dot {
+    display: block;
+    width: rem(10);
+    height: rem(10);
+    background-color: $white;
+    border-radius: 50%;
+    margin-right: rem(16);
+    opacity: 17.44%;
+}
+
+.dotActive {
+    opacity: 1;
+}
+
+.contentWrapper {
+    text-align: center;
+}
+
+.dataWrapper {
+    margin: rem(32) 0 rem(16);
+}
+
+.dataLabel {
+    font-family: $bellefair;
+    font-size: rem(16);
+    opacity: 49.51%;
+    margin-bottom: rem(8);
+    text-transform: uppercase;
+}
+
+.data {
+    font-size: rem(24);
+    text-transform: uppercase;
+}
