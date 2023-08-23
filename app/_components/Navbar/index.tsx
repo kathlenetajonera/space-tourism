@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { itemTransition, itemsTransition, sidebarTransition } from './utils';
 import Navicon from '../Navicon';
 import { NAV_ITEMS } from './data';
 import './styles.scss';
@@ -12,7 +14,11 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="flex-between nav">
+        <motion.nav
+            initial={false}
+            animate={isOpen ? 'open' : 'closed'}
+            className="flex-between nav"
+        >
             <Image
                 src="/shared/logo.svg"
                 alt="Space Tourism"
@@ -22,28 +28,33 @@ const Navbar = () => {
 
             <Navicon isOpen={isOpen} setIsOpen={setIsOpen} />
 
-            {isOpen && (
-                <div className="nav__menu">
+            <motion.div className="nav__menu" variants={sidebarTransition}>
+                <motion.div variants={itemsTransition}>
                     {NAV_ITEMS.map((item, index) => {
                         const isActive = pathname === item.link;
 
                         return (
-                            <div
+                            <motion.div
+                                key={item.link}
                                 className={`nav__item ${
                                     isActive ? 'active' : ''
                                 }`}
-                                key={item.link}
+                                variants={itemTransition}
                             >
-                                <Link className="nav__link" href={item.link}>
+                                <Link
+                                    className="nav__link"
+                                    href={item.link}
+                                    onClick={() => setIsOpen(false)}
+                                >
                                     <span>0{index + 1}</span>
                                     {item.label}
                                 </Link>
-                            </div>
+                            </motion.div>
                         );
                     })}
-                </div>
-            )}
-        </nav>
+                </motion.div>
+            </motion.div>
+        </motion.nav>
     );
 };
 

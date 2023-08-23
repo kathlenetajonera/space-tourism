@@ -25,6 +25,9 @@ export default async function Destination({
 
     return (
         <>
+            <FullBackground
+                backgroundImage={'/crew/background-crew-mobile.jpg'}
+            />
             <FlexWrapper>
                 <PageTitle number="03" title="Meet your crew" />
 
@@ -44,7 +47,7 @@ export default async function Destination({
 
                             return (
                                 <Link
-                                    key={name}
+                                    key={crew.name}
                                     href={sanitizedName(crew.name)}
                                     className={`${styles.dot} ${
                                         isActive ? styles.dotActive : ''
@@ -66,10 +69,6 @@ export default async function Destination({
                     </div>
                 </div>
             </FlexWrapper>
-
-            <FullBackground
-                backgroundImage={'/crew/background-crew-mobile.jpg'}
-            />
         </>
     );
 }

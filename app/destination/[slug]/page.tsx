@@ -24,6 +24,11 @@ export default async function Destination({
 
     return (
         <>
+            <FullBackground
+                backgroundImage={
+                    '/destination/background-destination-mobile.jpg'
+                }
+            />
             <FlexWrapper>
                 <PageTitle number="02" title="Pick your destination" />
                 <div className={styles.contentWrapper}>
@@ -74,12 +79,6 @@ export default async function Destination({
                     </div>
                 </div>
             </FlexWrapper>
-
-            <FullBackground
-                backgroundImage={
-                    '/destination/background-destination-mobile.jpg'
-                }
-            />
         </>
     );
 }
