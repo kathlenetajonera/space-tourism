@@ -35,8 +35,8 @@ export default async function Destination({
                     <Image
                         src={currentData.images.png}
                         alt=""
-                        width={177.12}
-                        height={222}
+                        width={327}
+                        height={223}
                         className={styles.image}
                     />
                     <div className={`separator ${styles.separator}`} />
