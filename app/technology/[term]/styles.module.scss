@@ -3,12 +3,20 @@
     left: 50%;
     transform: translateX(-50%);
     min-width: 100vw;
+
+    @include breakpoint(tabletXs) {
+        height: rem(310);
+    }
 }
 
 .selection {
     display: flex;
     justify-content: center;
     margin: rem(34) 0 rem(26);
+
+    @include breakpoint(tabletXs) {
+        margin: rem(56) 0 rem(44);
+    }
 }
 
 .button {
@@ -22,6 +30,12 @@
     &:not(:last-child) {
         margin-right: rem(16);
     }
+
+    @include breakpoint(tabletXs) {
+        width: rem(58);
+        height: rem(58);
+        font-size: rem(24);
+    }
 }
 
 .buttonActive {
@@ -31,6 +45,8 @@
 
 .contentWrapper {
     text-align: center;
+    max-width: rem(458);
+    margin: 0 auto;
 }
 
 .titleWrapper {
@@ -43,9 +59,17 @@
     letter-spacing: 2.36px;
     margin-bottom: rem(8);
     text-transform: uppercase;
+
+    @include breakpoint(tabletXs) {
+        font-size: rem(16);
+    }
 }
 
 .data {
     font-size: rem(24);
     text-transform: uppercase;
+
+    @include breakpoint(tabletXs) {
+        font-size: rem(40);
+    }
 }

@@ -5,6 +5,7 @@ import { Technology } from 'api/technology/types';
 import { getTechnologies } from './service';
 import FullBackground from '@components/FullBackground';
 import FlexWrapper from '@components/Layouts/FlexWrapper';
+import ContentWrapper from '@components/Layouts/ContentWrapper';
 import PageTitle from '@components/PageTitle';
 import styles from './styles.module.scss';
 
@@ -24,7 +25,7 @@ export default async function Page({ params }: { params: { term: string } }) {
         <>
             <FlexWrapper>
                 <PageTitle number="03" title="Space Launch 101" />
-                <div>
+                <ContentWrapper>
                     <Image
                         src={currentData.images.landscape}
                         alt=""
@@ -61,7 +62,7 @@ export default async function Page({ params }: { params: { term: string } }) {
 
                         <p>{currentData.description}</p>
                     </div>
-                </div>
+                </ContentWrapper>
             </FlexWrapper>
 
             <FullBackground
