@@ -1,11 +1,46 @@
+.contentContainer {
+    max-width: rem(520) !important;
+    margin: 0 auto !important;
+
+    @include breakpoint(tabletXs) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+.imageWrapper {
+    @include breakpoint(tabletXs) {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
 .image {
     display: block;
     object-fit: contain;
     margin: 0 auto;
+
+    @include breakpoint(tabletXs) {
+        min-width: 65vw;
+        height: 100%;
+        max-height: rem(520);
+    }
 }
 
 .separator {
     margin-top: 0;
+
+    @include breakpoint(tabletXs) {
+        display: none;
+    }
+}
+
+.dots {
+    @include breakpoint(tabletXs) {
+        margin: rem(40) 0;
+    }
 }
 
 .dot {
@@ -36,9 +71,17 @@
     opacity: 49.51%;
     margin-bottom: rem(8);
     text-transform: uppercase;
+
+    @include breakpoint(tabletXs) {
+        font-size: rem(24);
+    }
 }
 
 .data {
     font-size: rem(24);
     text-transform: uppercase;
+
+    @include breakpoint(tabletXs) {
+        font-size: rem(40);
+    }
 }

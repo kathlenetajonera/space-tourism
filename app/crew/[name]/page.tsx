@@ -5,6 +5,7 @@ import { Crew } from 'api/crew/types';
 import { getCrewMembers } from './service';
 import FullBackground from '@components/FullBackground';
 import FlexWrapper from '@components/Layouts/FlexWrapper';
+import ContentWrapper from '@components/Layouts/ContentWrapper';
 import PageTitle from '@components/PageTitle';
 import styles from './styles.module.scss';
 
@@ -31,17 +32,19 @@ export default async function Destination({
             <FlexWrapper>
                 <PageTitle number="03" title="Meet your crew" />
 
-                <div>
-                    <Image
-                        src={currentData.images.png}
-                        alt=""
-                        width={327}
-                        height={223}
-                        className={styles.image}
-                    />
+                <ContentWrapper customClass={styles.contentContainer}>
+                    <div className={styles.imageWrapper}>
+                        <Image
+                            src={currentData.images.png}
+                            alt=""
+                            width={327}
+                            height={223}
+                            className={styles.image}
+                        />
+                    </div>
                     <div className={`separator ${styles.separator}`} />
 
-                    <div className="flex-center">
+                    <div className={`flex-center ${styles.dots}`}>
                         {crewMembers.map((crew) => {
                             const isActive = sanitizedName(crew.name) === name;
 
@@ -67,7 +70,7 @@ export default async function Destination({
 
                         <p>{currentData.bio}</p>
                     </div>
-                </div>
+                </ContentWrapper>
             </FlexWrapper>
         </>
     );
