@@ -28,10 +28,14 @@ const Navbar = () => {
 
             <Navicon isOpen={isOpen} setIsOpen={setIsOpen} />
 
-            <motion.div className="nav__menu" variants={sidebarTransition}>
-                <motion.div variants={itemsTransition}>
+            <motion.div
+                className="nav__menu"
+                // variants={sidebarTransition}
+            >
+                <motion.div variants={itemsTransition} className="nav__wrapper">
                     {NAV_ITEMS.map((item, index) => {
-                        const isActive = pathname === item.link;
+                        const path = pathname.split('/')[1];
+                        const isActive = `/${path}` === item.link;
 
                         return (
                             <motion.div
@@ -39,7 +43,7 @@ const Navbar = () => {
                                 className={`nav__item ${
                                     isActive ? 'active' : ''
                                 }`}
-                                variants={itemTransition}
+                                // variants={itemTransition}
                             >
                                 <Link
                                     className="nav__link"

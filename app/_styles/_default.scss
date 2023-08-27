@@ -28,6 +28,10 @@ p {
     font-size: rem(15);
     line-height: rem(25);
     color: $purple;
+
+    @include breakpoint(tabletXs) {
+        font-size: rem(16);
+    }
 }
 
 a {
@@ -48,6 +52,10 @@ button {
 
 h1 {
     font-size: rem(80);
+
+    @include breakpoint(tabletXs) {
+        font-size: rem(150);
+    }
 }
 
 h2 {

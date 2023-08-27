@@ -1,0 +1,6 @@
+.contentWrapper {
+    @include breakpoint(tabletXs) {
+        max-width: rem(573);
+        margin: 0 auto;
+    }
+}

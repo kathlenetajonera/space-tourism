@@ -3,10 +3,19 @@
     height: rem(150);
     background-color: $white;
     border-radius: 50%;
+
+    @include breakpoint(tabletXs) {
+        width: rem(242);
+        height: rem(242);
+    }
 }
 
 .label {
     font-family: $bellefair;
     font-size: rem(20);
     color: $black;
+
+    @include breakpoint(tabletXs) {
+        font-size: rem(32);
+    }
 }

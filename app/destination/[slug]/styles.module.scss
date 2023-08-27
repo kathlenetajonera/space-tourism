@@ -1,5 +1,17 @@
 .contentWrapper {
     text-align: center;
+
+    @include breakpoint(tabletXs) {
+        margin-bottom: rem(17);
+    }
+}
+
+.image {
+    @include breakpoint(tabletXs) {
+        width: rem(300);
+        height: rem(300);
+        margin: rem(60) 0 rem(53);
+    }
 }
 
 .selection {
@@ -18,6 +30,11 @@
 
 .title {
     text-transform: uppercase;
+
+    @include breakpoint(tabletXs) {
+        font-size: rem(80);
+        margin-top: rem(32);
+    }
 }
 
 .buttonActive {
@@ -38,9 +55,20 @@
     }
 }
 
+.dataContainer {
+    @include breakpoint(tabletXs) {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
 .dataWrapper {
     margin-bottom: rem(32);
     text-align: center;
+
+    @include breakpoint(tabletXs) {
+        margin-bottom: 0;
+    }
 }
 
 .dataLabel {
