@@ -32,6 +32,11 @@ p {
     @include breakpoint(tabletXs) {
         font-size: rem(16);
     }
+
+    @include breakpoint(desktopXs) {
+        font-size: rem(18);
+        line-height: rem(32);
+    }
 }
 
 a {

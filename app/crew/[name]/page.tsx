@@ -29,19 +29,19 @@ export default async function Destination({
             <FullBackground
                 backgroundImage={'/crew/background-crew-mobile.jpg'}
             />
-            <FlexWrapper>
-                <PageTitle number="03" title="Meet your crew" />
+            <PageTitle number="03" title="Meet your crew" />
+            <FlexWrapper customClass={styles.flexWrapper}>
+                <div className={styles.imageWrapper}>
+                    <Image
+                        src={currentData.images.png}
+                        alt=""
+                        width={327}
+                        height={223}
+                        className={styles.image}
+                    />
+                </div>
 
                 <ContentWrapper customClass={styles.contentContainer}>
-                    <div className={styles.imageWrapper}>
-                        <Image
-                            src={currentData.images.png}
-                            alt=""
-                            width={327}
-                            height={223}
-                            className={styles.image}
-                        />
-                    </div>
                     <div className={`separator ${styles.separator}`} />
 
                     <div className={`flex-center ${styles.dots}`}>

@@ -8,12 +8,23 @@
     }
 }
 
+.flexWrapper {
+    @include breakpoint(desktopXs) {
+        flex-direction: row-reverse !important;
+    }
+}
+
 .imageWrapper {
     @include breakpoint(tabletXs) {
         position: fixed;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    @include breakpoint(desktopXs) {
+        position: unset;
+        transform: none;
     }
 }
 
@@ -26,6 +37,10 @@
         min-width: 65vw;
         height: 100%;
         max-height: rem(520);
+    }
+
+    @include breakpoint(desktopXs) {
+        min-width: auto;
     }
 }
 
@@ -41,6 +56,10 @@
     @include breakpoint(tabletXs) {
         margin: rem(40) 0;
     }
+
+    @include breakpoint(desktopXs) {
+        justify-content: flex-start;
+    }
 }
 
 .dot {
@@ -51,6 +70,11 @@
     border-radius: 50%;
     margin-right: rem(16);
     opacity: 17.44%;
+
+    @include breakpoint(desktopXs) {
+        width: rem(15);
+        height: rem(15);
+    }
 }
 
 .dotActive {
@@ -59,10 +83,23 @@
 
 .contentWrapper {
     text-align: center;
+
+    @include breakpoint(desktopXs) {
+        text-align: left;
+        margin-right: rem(80);
+    }
 }
 
 .dataWrapper {
     margin: rem(32) 0 rem(16);
+
+    @include breakpoint(tabletXs) {
+        margin-top: 0;
+    }
+
+    @include breakpoint(desktopXs) {
+        margin-bottom: rem(27);
+    }
 }
 
 .dataLabel {
@@ -75,6 +112,11 @@
     @include breakpoint(tabletXs) {
         font-size: rem(24);
     }
+
+    @include breakpoint(desktopXs) {
+        font-size: rem(32);
+        margin-bottom: rem(15);
+    }
 }
 
 .data {
@@ -83,5 +125,9 @@
 
     @include breakpoint(tabletXs) {
         font-size: rem(40);
+    }
+
+    @include breakpoint(desktopXs) {
+        font-size: rem(58);
     }
 }

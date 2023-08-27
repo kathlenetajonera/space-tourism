@@ -4,13 +4,33 @@
     @include breakpoint(tabletXs) {
         margin-bottom: rem(17);
     }
+
+    @include breakpoint(desktopXs) {
+        max-width: rem(445);
+        text-align: left;
+    }
+}
+
+.imageWrapper {
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint(desktopXs) {
+        margin-right: rem(80);
+    }
 }
 
 .image {
     @include breakpoint(tabletXs) {
         width: rem(300);
         height: rem(300);
-        margin: rem(60) 0 rem(53);
+        margin-bottom: rem(53);
+    }
+
+    @include breakpoint(desktopXs) {
+        width: rem(445);
+        height: rem(445);
+        object-fit: contain;
     }
 }
 
@@ -60,6 +80,10 @@
         display: flex;
         justify-content: space-evenly;
     }
+
+    @include breakpoint(desktopXs) {
+        justify-content: flex-start;
+    }
 }
 
 .dataWrapper {
@@ -68,6 +92,14 @@
 
     @include breakpoint(tabletXs) {
         margin-bottom: 0;
+    }
+
+    @include breakpoint(desktopXs) {
+        text-align: left;
+
+        &:first-child {
+            margin-right: rem(80);
+        }
     }
 }
 

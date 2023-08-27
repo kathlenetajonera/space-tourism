@@ -23,9 +23,9 @@ export default async function Page({ params }: { params: { term: string } }) {
 
     return (
         <>
-            <FlexWrapper>
-                <PageTitle number="03" title="Space Launch 101" />
-                <ContentWrapper>
+            <PageTitle number="03" title="Space Launch 101" />
+            <FlexWrapper customClass={styles.flexWrapper}>
+                <div>
                     <Image
                         src={currentData.images.landscape}
                         alt=""
@@ -33,7 +33,9 @@ export default async function Page({ params }: { params: { term: string } }) {
                         height={170}
                         className={styles.image}
                     />
+                </div>
 
+                <ContentWrapper customClass={styles.contentContainer}>
                     <div className={styles.selection}>
                         {technologies.map((tech, index) => {
                             const isActive = sanitizedName(tech.name) === term;

@@ -30,18 +30,19 @@ export default async function Destination({
                     '/destination/background-destination-mobile.jpg'
                 }
             />
+            <PageTitle number="02" title="Pick your destination" />
             <FlexWrapper>
-                <PageTitle number="02" title="Pick your destination" />
+                <div className={styles.imageWrapper}>
+                    <Image
+                        src={currentData.images.png}
+                        alt={currentData.name}
+                        width={170}
+                        height={170}
+                        className={styles.image}
+                    />
+                </div>
                 <ContentWrapper>
                     <div className={styles.contentWrapper}>
-                        <Image
-                            src={currentData.images.png}
-                            alt={currentData.name}
-                            width={170}
-                            height={170}
-                            className={styles.image}
-                        />
-
                         <div className={styles.selection}>
                             {destinations.map((destination) => {
                                 const name = destination.name.toLowerCase();

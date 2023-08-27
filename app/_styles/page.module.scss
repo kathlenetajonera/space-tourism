@@ -8,6 +8,10 @@
     @include breakpoint(tabletXs) {
         padding: 0 rem(40) rem(62);
     }
+
+    @include breakpoint(desktopXs) {
+        padding: 0 rem(55) rem(62);
+    }
 }
 
 .flex_wrapper {
@@ -21,6 +25,10 @@
     color: $white;
     max-width: rem(444);
     margin: 0 auto rem(81);
+
+    @include breakpoint(desktopXs) {
+        text-align: left;
+    }
 }
 
 .subheading {
@@ -31,14 +39,26 @@
     @include breakpoint(tabletXs) {
         font-size: rem(20);
     }
+
+    @include breakpoint(desktopXs) {
+        font-size: rem(28);
+    }
 }
 
 .heading {
     margin: rem(16) 0;
+
+    @include breakpoint(desktopXs) {
+        margin: rem(24) 0;
+    }
 }
 
 .desc {
     line-height: rem(25);
+
+    @include breakpoint(desktopXs) {
+        line-height: rem(32);
+    }
 }
 
 .desc,

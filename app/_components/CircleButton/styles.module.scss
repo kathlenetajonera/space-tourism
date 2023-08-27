@@ -8,6 +8,11 @@
         width: rem(242);
         height: rem(242);
     }
+
+    @include breakpoint(desktopXs) {
+        width: rem(274);
+        height: rem(274);
+    }
 }
 
 .label {

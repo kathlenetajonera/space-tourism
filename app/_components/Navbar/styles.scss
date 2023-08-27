@@ -1,6 +1,13 @@
 .nav {
     z-index: 2;
 
+    &__logo {
+        @include breakpoint(tabletXs) {
+            width: rem(48);
+            height: rem(48);
+        }
+    }
+
     &__menu {
         position: absolute;
         background-image: url('../../../public/shared/mobile-menu-bg.png');
@@ -20,11 +27,18 @@
             background: rgba(255, 255, 255, 0.04);
             backdrop-filter: blur(81.55px);
         }
+
+        @include breakpoint(desktopXs) {
+            width: rem(830);
+            right: rem(-55);
+            padding-right: rem(165);
+        }
     }
 
     &__wrapper {
         @include breakpoint(tabletXs) {
             display: flex;
+            justify-content: flex-end;
         }
     }
 
@@ -39,6 +53,10 @@
             &:last-child {
                 margin-right: 0;
             }
+        }
+
+        @include breakpoint(desktopXs) {
+            margin-right: rem(48);
         }
 
         &.active {
@@ -81,12 +99,21 @@
             font-size: rem(14);
         }
 
+        @include breakpoint(desktopXs) {
+            display: flex;
+            font-size: rem(16);
+        }
+
         span {
             font-weight: 700;
             margin-right: rem(11);
 
             @include breakpoint(tabletXs) {
                 display: none;
+            }
+
+            @include breakpoint(desktopXs) {
+                display: block;
             }
         }
     }

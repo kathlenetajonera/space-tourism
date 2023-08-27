@@ -24,6 +24,7 @@ const Navbar = () => {
                 alt="Space Tourism"
                 width={40}
                 height={40}
+                className="nav__logo"
             />
 
             <Navicon isOpen={isOpen} setIsOpen={setIsOpen} />

@@ -1,3 +1,9 @@
+.flexWrapper {
+    @include breakpoint(desktopXs) {
+        flex-direction: row-reverse !important;
+    }
+}
+
 .image {
     position: relative;
     left: 50%;
@@ -6,6 +12,16 @@
 
     @include breakpoint(tabletXs) {
         height: rem(310);
+    }
+
+    @include breakpoint(desktopXs) {
+        left: unset;
+        right: rem(-62);
+        min-width: unset;
+        transform: none;
+
+        width: rem(515);
+        height: rem(527);
     }
 }
 
@@ -16,6 +32,11 @@
 
     @include breakpoint(tabletXs) {
         margin: rem(56) 0 rem(44);
+    }
+
+    @include breakpoint(desktopXs) {
+        flex-direction: column;
+        margin-right: rem(40);
     }
 }
 
@@ -36,6 +57,10 @@
         height: rem(58);
         font-size: rem(24);
     }
+
+    @include breakpoint(desktopXs) {
+        margin-bottom: rem(32);
+    }
 }
 
 .buttonActive {
@@ -43,10 +68,20 @@
     color: $black;
 }
 
+.contentContainer {
+    @include breakpoint(desktopXs) {
+        display: flex;
+    }
+}
+
 .contentWrapper {
     text-align: center;
     max-width: rem(458);
     margin: 0 auto;
+
+    @include breakpoint(desktopXs) {
+        text-align: left;
+    }
 }
 
 .titleWrapper {
@@ -71,5 +106,9 @@
 
     @include breakpoint(tabletXs) {
         font-size: rem(40);
+    }
+
+    @include breakpoint(desktopXs) {
+        font-size: rem(56);
     }
 }
